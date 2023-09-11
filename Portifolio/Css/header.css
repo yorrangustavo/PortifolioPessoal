@@ -1,0 +1,88 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+.header .photo{
+width: 200px;
+height: 200px;
+border-radius: 50%;
+border: 2px solid #FFF
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+    color:#FFF
+   }
+
+.header .title{
+    text-align: center;
+    font-family: 'Manrope', sans-serif;    
+
+}
+.skils{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.skils p {
+   margin: .5rem;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   font-size: 1.1rem;
+}
+.skils p::before {
+    content:'';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .4rem;
+     
+ }
+ .skils .user::before {
+    background-image: url('../img/icon/svg/icon.svg');
+ }
+ .skils .localizacao::before {
+    background-image: url('../img/icon/svg/Localization.svg');
+ }
+ .skils .user::before {
+    background-image: url('../img/icon/svg/icon.svg');
+ }
+ .skils .phone::before {
+    background-image: url('../img/icon/svg/phone.svg');
+ }
+ .skils .email::before {
+    background-image: url('../img/icon/svg/email.svg');
+ }
+
+@media only screen and (min-width: 769px){
+    .header{
+       display: grid;
+       grid-template-areas: 
+       "photo title"
+       "photo skils"
+    
+    ;
+    }
+    .header .photo{
+        grid-area: photo;
+        margin: 0 auto;
+    }
+    .header .title{
+        grid-area: title;
+        text-align: start;
+        max-width: 210px;
+    }
+    .header .skils{
+        grid-area: skils;
+    }
+
+}
